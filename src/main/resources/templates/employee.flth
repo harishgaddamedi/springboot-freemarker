@@ -1,0 +1,21 @@
+<employeeRequest>
+	<header>
+		<appNm>Spring-Boot-FreeMarker-App</appNm>
+	</header>
+	<body>
+		<empId>${empId}</empId>
+		<empName>${empName}</empName>
+		<empSkills>
+		<#list skills as skillId, listSkills>
+		  <empSkill>
+			<skillId>${skillId}<skillId>
+			<skills>
+				<#list listSkills as skill>
+					<skill>${skill}</skill>
+				</#list>
+			</skills>
+		  </empSkill>
+		</#list>
+		</empSkills>
+	</body>
+</employeeRequest>
